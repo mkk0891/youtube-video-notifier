@@ -2,7 +2,8 @@ name: YouTube Video Notifier
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时检查一次
+    - cron: '*/15 * * * *'  # 这代表每 15 分钟运行一次
+  workflow_dispatch:        # 建议保留这一行，方便你随时手动测试
 
 jobs:
   notify:
